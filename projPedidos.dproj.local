@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/09/25 20:31:31.000.689,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 20:33:21.000.170,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrm.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2022/09/25 20:33:21.000.170,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrm.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 20:33:37.000.534,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrm.pas</Transaction>
+    <Transaction>2022/09/25 20:33:37.000.534,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrm.dfm</Transaction>
+    <Transaction>2022/09/25 22:12:20.000.505,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmLogin.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/09/25 22:12:20.000.505,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmLogin.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/09/25 22:26:10.000.398,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 22:26:24.000.220,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\projPedidos.dproj=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2022/09/25 22:26:40.000.204,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 22:27:19.000.042,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\DM\uDM.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/25 22:27:19.000.042,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\DM\uDM.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.dfm</Transaction>
+    <Transaction>2022/09/26 00:16:25.000.753,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 00:16:42.000.110,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.dfm</Transaction>
+    <Transaction>2022/09/26 00:16:42.000.110,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.pas</Transaction>
+    <Transaction>2022/09/26 00:26:50.000.772,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmMenuPrincipal.pas</Transaction>
+    <Transaction>2022/09/26 00:26:50.000.772,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmPrincipal.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmMenuPrincipal.dfm</Transaction>
+    <Transaction>2022/09/26 02:58:39.000.021,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 02:59:00.000.126,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmConsultaPedidos.dfm</Transaction>
+    <Transaction>2022/09/26 02:59:00.000.126,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmConsultaPedidos.pas</Transaction>
+    <Transaction>2022/09/26 03:21:05.000.165,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 03:21:20.000.312,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\CLASS\uPedido.pas</Transaction>
+    <Transaction>2022/09/26 03:38:41.000.200,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 03:40:26.000.088,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmCadastroPedido.pas</Transaction>
+    <Transaction>2022/09/26 03:40:26.000.088,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmCadastroPedido.dfm</Transaction>
+    <Transaction>2022/09/26 04:24:18.000.118,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 04:24:27.000.409,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmCadastroItem.pas</Transaction>
+    <Transaction>2022/09/26 04:24:27.000.409,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.dfm=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\uFrmCadastroItem.dfm</Transaction>
+    <Transaction>2022/09/26 14:15:26.593,=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+    <Transaction>2022/09/26 14:15:35.127,C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\CLASS\uItem.pas=C:\Users\vinic\Documents\Embarcadero\Studio\Projects\projeto pedidos\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

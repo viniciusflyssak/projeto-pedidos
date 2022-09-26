@@ -1,0 +1,122 @@
+unit uItem;
+
+interface
+
+uses Classes, SysUtils, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, uDM;
+
+type
+  TItem = class
+  private
+    FNroItem: Integer;
+    FNroPedido: Integer;
+    FNroItemPedido: Integer;
+    FCodProduto: String;
+    FQtde: Double;
+    FUn: String;
+    FPreco: Currency;
+    FPercDesconto: Double;
+    FValorDesconto: Currency;
+    FValorTotal: Currency;
+  public
+    constructor create;
+    procedure getItem(NroItemCarregar: integer);
+    procedure salvarItem;
+    property NroItem: Integer read FNroItem write FNroItem;
+    property NroPedido: Integer read FNroPedido write FNroPedido;
+    property NroItemPedido: Integer read FNroItemPedido write FNroItemPedido;
+    property CodProduto: String read FCodProduto write FCodProduto;
+    property Qtde: Double read FQtde write FQtde;
+    property Un: String read FUn write FUn;
+    property Preco: Currency read FPreco write FPreco;
+    property PercDesconto: Double read FPercDesconto write FPercDesconto;
+    property ValorDesconto: Currency read FValorDesconto write FValorDesconto;
+    property ValorTotal: Currency read FValorTotal write FValorTotal;
+  end;
+
+implementation
+
+{ TItem }
+
+constructor TItem.create;
+begin
+  FNroItem := 0;
+  FNroPedido := 0;
+  FNroItemPedido := 0;
+  FCodProduto := '';
+  FQtde := 0;
+  FUn := '';
+  FPreco := 0;
+  FPercDesconto := 0;
+  FValorDesconto := 0;
+  FValorTotal := 0;
+end;
+
+procedure TItem.getItem(NroItemCarregar: integer);
+const
+  cSqlCarregaItem = ' SELECT * FROM PED_PRODS WHERE NROPED_PRODS = :pNroItem ';
+var
+  qryCarregarItem: TFDQuery;
+begin
+  qryCarregarItem := TFDQuery.Create(nil);
+  try
+    qryCarregarItem.Connection := DM.Connection;
+    qryCarregarItem.SQL.Add(cSqlCarregaItem);
+    qryCarregarItem.ParamByName('pNroItem').Value := NroItemCarregar;
+    qryCarregarItem.Open;
+    FNroItem := qryCarregarItem.FieldByName('NROPED_PRODS').AsInteger;
+    FNroPedido := qryCarregarItem.FieldByName('NROPEDIDO').AsInteger;
+    FNroItemPedido := qryCarregarItem.FieldByName('NROITEM').AsInteger;
+    FCodProduto := qryCarregarItem.FieldByName('CODPRODUTO').AsString;
+    FQtde := qryCarregarItem.FieldByName('QTDE').AsCurrency;
+    FUn := qryCarregarItem.FieldByName('UN').AsString;
+    FPreco := qryCarregarItem.FieldByName('PRECO').AsCurrency;
+    FPercDesconto := qryCarregarItem.FieldByName('PERCDESCONTO').AsCurrency;
+    FValorDesconto := qryCarregarItem.FieldByName('VALDESCONTO').AsCurrency;
+    FValorTotal := qryCarregarItem.FieldByName('VALTOTAL').AsCurrency;
+  finally
+    FreeAndNil(qryCarregarItem);
+  end;
+end;
+
+procedure TItem.salvarItem(idItem: integer);
+const
+  cSqlUpdateItem = ' UPDATE PED_PRODS SET CODPRODUTO = :pCodProd, QTDE = :pQtde, UN = :pUn, ' +
+                   ' PRECO = :pPreco, PERCDESCONTO = :pPercDesc, VALDESCONTO = :pValDesc, VALTOTAL = :pValTotal ' +
+                   ' WHERE NROPED_PRODS = :pItemProd ';
+  cSqlInsertItem = ' INSERT INTO PED_PRODS (NROPED_PRODS, NROPEDIDO, NROITEM, CODPRODUTO, QTDE, UN, PRECO, PERCDESCONTO, VALDESCONTO, VALTOTAL) ' +
+                   ' VALUES (:pNroItem, :pCodPedido, :pCodItem, :pCodProd, :pQtde, :pUn, :pPreco, :pPercDesc, :pValDesc, :pValTotal) ';
+var
+  qryGravarItem: TFDQuery;
+begin
+  qryGravarItem := TFDQuery.Create(nil);
+  try
+    qryGravarItem.Connection := DM.Connection;
+    if not(idItem > 0) then
+    begin
+      qryGravarItem.SQL.Add(cSqlInsertItem);
+      qryGravarItem.ParamByName('pNroItem').Value := FNroItem;
+      qryGravarItem.ParamByName('pCodPedido').Value := FNroPedido
+      qryGravarItem.ParamByName('pCodItem').Value := FNroItemPedido;
+    end
+    else
+    begin
+      qryGravarItem.SQL.Add(cSqlUpdateItem);
+      qryGravarItem.ParamByName('pItemProd').Value := idItem;
+    end;
+    qryGravarItem.ParamByName('pCodProd').Value := FCodProduto;
+    qryGravarItem.ParamByName('pQtde').Value := FQtde;
+    qryGravarItem.ParamByName('pUn').Value := FUn;
+    qryGravarItem.ParamByName('pPreco').Value := edtPreco.Text;
+    qryGravarItem.ParamByName('pPercDesc').Value := edtPercoDesc.Text;
+    qryGravarItem.ParamByName('pValDesc').Value := edtValDesc.Text;
+    qryGravarItem.ParamByName('pValTotal').Value := edtValTotal.Text;
+    qryGravarItem.ExecSQL;
+  finally
+    FreeAndNil(qryGravarItem);
+  end;
+end;
+
+end.
