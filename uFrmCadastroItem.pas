@@ -104,7 +104,7 @@ end;
 
 procedure TfrmCadastroItem.edtCodProdutoExit(Sender: TObject);
 const
-  cSqlPesquisaProd = ' SELECT PRODUTO FROM PRODUTOS WHERE CODPRODUTO = :pCodProduto ';
+  cSqlPesquisaProd = ' SELECT PRODUTO, UN FROM PRODUTOS WHERE CODPRODUTO = :pCodProduto ';
 var
   qryPesquisaProd: TFDQuery;
 begin
@@ -122,6 +122,7 @@ begin
     if qryPesquisaProd.RecordCount > 0 then
     begin
       edtNomeProduto.Text := qryPesquisaProd.FieldByName('PRODUTO').AsString;
+      edtUn.Text := qryPesquisaProd.FieldByName('UN').AsString;
     end
     else
     begin
@@ -185,6 +186,7 @@ begin
   edtValTotal.Text := FloatToStr(Item.ValorTotal);
   if idItem > 0 then
     edtCodProdutoExit(Sender);
+  edtUn.Text := Item.Un;
 end;
 
 end.
